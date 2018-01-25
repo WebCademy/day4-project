@@ -1,0 +1,21 @@
+extends templates/main-template
+
+block variables
+	- var pageTitle = 'Размещение'
+
+block main
+	include modules/header.pug
+	.section-content
+		h1 Обратная связь
+		form.contact-form(id="contact-form")
+			.row(id="form-notify")
+				//- .message.message--error Сообщение об ошибке
+				//- .message.message--success Форма успешно отправлена
+
+			.contact-form__row
+				input.input.input--half(type="text" id="input-name" name="contact-font-name" placeholder="Введите имя")
+				input.input.input--half(type="text" id="input-email" name="contact-font-email" placeholder="Введите email")
+			.contact-form__row
+				textarea.textarea(id="input-message" name="contact-font-message" placeholder="Ваше сообщение")
+			.contact-form__row
+				input.button(type="submit" id="input-sumbit" name="contact-font-sumbit" value="Отправить")
